@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>URL跳转配置</title>
+    <script
+      type="text/javascript"
+      src="//statres.quickapp.cn/quickapp/js/routerinline.min.js"
+    ></script>
+  </head>
+  <body>
+    <!-- 检测平台是否支持服务 -->
+    <script type="text/javascript">
+      // 需要在body标签里实现 channelReady 方法的调用
+      // 通过script标签引入routerinline.min.js后， channelReady函数会绑定到window上，因为是全局函数，所以可直接引用
+      // 通过传递回调函数获取结果，平台支持快应用则返回true，不支持则返回false
+      channelReady(function(bAvailable) {
+        alert('是否存在框架服务：' + bAvailable)
+      })
+    </script>
+  </body>
+</html>
